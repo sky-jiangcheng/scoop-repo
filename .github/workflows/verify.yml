@@ -76,7 +76,7 @@ jobs:
           # .../<owner>/<repo>/releases/download/<tag>/<asset>
           # A regex rather than cut: "releases/download" is two path segments,
           # and off-by-one field indexing silently produces the wrong tag.
-          if ! parsed="$(printf '%s' "$url" | sed -nE 's#^https://github\\.com/([^/]+/[^/]+)/releases/download/([^/]+)/(.+)$#\\1 \\2 \\3#p')"; then
+          if ! parsed="$(printf '%s' "$url" | sed -nE 's#^https://github\.com/([^/]+/[^/]+)/releases/download/([^/]+)/(.+)$#\1 \2 \3#p')"; then
             echo "::error::cannot parse url: $url"
             exit 1
           fi
