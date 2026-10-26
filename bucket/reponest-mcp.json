@@ -1,17 +1,24 @@
+# DEPRECATED NAME — the project was renamed from RepoNest to Repotory.
+#
+# This alias exists so a command saved before the rename keeps working. It
+# serves the CURRENT release: the previous version of this file pointed at
+# RepoNest v1.8.0, so installing it silently fetched a six-versions-old
+# build. Use the new name instead.
+#
 {
-  "version": "1.8.0",
-  "description": "MCP stdio server exposing the RepoNest local knowledge base to AI agents",
-  "homepage": "https://github.com/sky-jiangcheng/RepoNest",
+  "version": "2.14.0",
+  "description": "MCP stdio server exposing the Repotory local knowledge base to AI agents",
+  "homepage": "https://github.com/sky-jiangcheng/repotory",
   "license": "MIT",
-  "url": "https://github.com/sky-jiangcheng/RepoNest/releases/download/v1.8.0/reponest-mcp-windows-amd64.zip",
-  "hash": "sha256:d0ddfa5fb27da3bba2064db91ce3ad1b808d73348b74bd9b64634f2dc79c679b",
-  "bin": "reponest-mcp.exe",
+  "url": "https://github.com/sky-jiangcheng/repotory/releases/download/v2.14.0/repotory-mcp-windows-amd64.zip",
+  "hash": "sha256:19be4601b9801994ce8577efe8e22fb323efd11663dd6522d8383f8075af0981",
+  "bin": "repotory-mcp.exe",
   "checkver": {
-    "url": "https://api.github.com/repos/sky-jiangcheng/RepoNest/releases/latest",
+    "url": "https://api.github.com/repos/sky-jiangcheng/repotory/releases/latest",
     "jsonpath": "$.tag_name",
     "regex": "v([\\d.]+)"
   },
   "autoupdate": {
-    "url": "https://github.com/sky-jiangcheng/RepoNest/releases/download/v$version/reponest-mcp-windows-amd64.zip"
+    "url": "https://github.com/sky-jiangcheng/repotory/releases/download/v$version/repotory-mcp-windows-amd64.zip"
   }
 }

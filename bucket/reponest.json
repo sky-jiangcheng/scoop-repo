@@ -1,17 +1,24 @@
+# DEPRECATED NAME — the project was renamed from RepoNest to Repotory.
+#
+# This alias exists so a command saved before the rename keeps working. It
+# serves the CURRENT release: the previous version of this file pointed at
+# RepoNest v1.8.0, so installing it silently fetched a six-versions-old
+# build. Use the new name instead.
+#
 {
-  "version": "1.8.0",
+  "version": "2.14.0",
   "description": "Local-first code project context base",
-  "homepage": "https://github.com/sky-jiangcheng/RepoNest",
+  "homepage": "https://github.com/sky-jiangcheng/repotory",
   "license": "MIT",
-  "url": "https://github.com/sky-jiangcheng/RepoNest/releases/download/v1.8.0/reponest-windows-amd64.zip",
-  "hash": "sha256:0eea2b981c460d8a0a41ce08fa7fdfa0a02a67c1169ddab54405e9fba531d73b",
-  "bin": "reponest.exe",
+  "url": "https://github.com/sky-jiangcheng/repotory/releases/download/v2.14.0/repotory-windows-amd64.zip",
+  "hash": "sha256:c0ce013c3534489d43ce9d58b396716c96382bf797261e9e32473a8811c67e4a",
+  "bin": "repotory.exe",
   "checkver": {
-    "url": "https://api.github.com/repos/sky-jiangcheng/RepoNest/releases/latest",
+    "url": "https://api.github.com/repos/sky-jiangcheng/repotory/releases/latest",
     "jsonpath": "$.tag_name",
     "regex": "v([\\d.]+)"
   },
   "autoupdate": {
-    "url": "https://github.com/sky-jiangcheng/RepoNest/releases/download/v$version/reponest-windows-amd64.zip"
+    "url": "https://github.com/sky-jiangcheng/repotory/releases/download/v$version/repotory-windows-amd64.zip"
   }
 }
