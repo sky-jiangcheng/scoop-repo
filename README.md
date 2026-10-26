@@ -1,14 +1,25 @@
 # scoop-repo
 
-Scoop bucket for [RepoNest](https://github.com/sky-jiangcheng/RepoNest) — the
+Scoop bucket for [Repotory](https://github.com/sky-jiangcheng/repotory) — the
 local-first code project context base.
 
 ## What is in here
 
 | Manifest | Package | Artifact |
 |----------|---------|----------|
-| [`bucket/reponest.json`](bucket/reponest.json) | `reponest` | `reponest-windows-amd64.zip` — the Wails desktop app |
-| [`bucket/reponest-mcp.json`](bucket/reponest-mcp.json) | `reponest-mcp` | `reponest-mcp-windows-amd64.zip` — the MCP stdio server |
+| [`bucket/repotory.json`](bucket/repotory.json) | `repotory` | `repotory-windows-amd64.zip` — the Wails desktop app |
+| [`bucket/repotory-mcp.json`](bucket/repotory-mcp.json) | `repotory-mcp` | `repotory-mcp-windows-amd64.zip` — the MCP stdio server |
+
+### Deprecated aliases
+
+`reponest` and `reponest-mcp` are the project's pre-rename names (the app was
+called RepoNest until v2.0.0). They are kept as aliases so a command saved
+before the rename keeps working — and they now serve the CURRENT release. The
+previous version of those files pointed at RepoNest v1.8.0, so installing them
+silently fetched a six-versions-old build; that is the failure this alias
+policy exists to prevent.
+
+Use the new names:
 
 ## Install
 
@@ -16,16 +27,16 @@ local-first code project context base.
 scoop bucket add repo https://github.com/sky-jiangcheng/scoop-repo
 
 # Desktop app
-scoop install repo/reponest
+scoop install repo/repotory
 
 # MCP server
-scoop install repo/reponest-mcp
+scoop install repo/repotory-mcp
 ```
 
 After installing the MCP server, register it with an AI client:
 
 ```powershell
-claude mcp add reponest -- (Get-Command reponest-mcp).Source
+claude mcp add repotory -- (Get-Command repotory-mcp).Source
 ```
 
 The desktop app is **not** required to use the MCP server. Both read the same
@@ -48,7 +59,7 @@ so a manifest whose `hash` has not been refreshed will still update cleanly.
 ## Maintenance
 
 The manifests in `bucket/` are generated from
-[`packaging/scoop/`](https://github.com/sky-jiangcheng/RepoNest/tree/master/packaging/scoop)
+[`packaging/scoop/`](https://github.com/sky-jiangcheng/repotory/tree/master/packaging/scoop)
 in the main repository. **Edit them there**, then re-publish; editing here will
 be overwritten on the next release.
 
