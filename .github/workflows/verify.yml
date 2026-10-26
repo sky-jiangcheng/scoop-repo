@@ -36,6 +36,11 @@ jobs:
       fail-fast: false
       matrix:
         include:
+          - manifest: repotory.json
+          - manifest: repotory-mcp.json
+          # The pre-rename aliases serve the SAME artifacts, so the digest
+          # check must hold for them too — otherwise the alias is free to rot
+          # into a version whose hash no longer matches.
           - manifest: reponest.json
           - manifest: reponest-mcp.json
     steps:
